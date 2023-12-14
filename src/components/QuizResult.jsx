@@ -1,6 +1,5 @@
 const QuizResult = (props) => {
   const level = (props.obtainedMarks / props.totalMarks) * 100;
-
   return (
     <div className="my-10 border rounded p-10 shadow-sm bg-gray-900 text-yellow-400">
       <h1 className="font-semibold italic text-center">
@@ -15,7 +14,7 @@ const QuizResult = (props) => {
       <br />
       <h1 className="text-center">
         {" "}
-        You got {level}{" "}
+        You got {Math.round(level)}{" "}
         <span>points.</span>
       </h1>
       <button

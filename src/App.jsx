@@ -23,6 +23,46 @@ function App() {
       options: ["Australia", "America", "Canada", "Germany"],
       answer: 1,
     },
+    {
+      question: "What is the capital of Brazil?",
+      options: ["Rio de Janeiro", "Sao Paulo", "Brasilia", "Salvador"],
+      answer: 2,
+    },
+    {
+      question: "Who wrote the play 'Romeo and Juliet'?",
+      options: [
+        "William Shakespeare",
+        "Jane Austen",
+        "Charles Dickens",
+        "Homer",
+      ],
+      answer: 0,
+    },
+    {
+      question: "In which year did the Titanic sink?",
+      options: ["1908", "1912", "1920", "1931"],
+      answer: 1,
+    },
+    {
+      question: "Which planet is known as the 'Red Planet'?",
+      options: ["Earth", "Mars", "Venus", "Jupiter"],
+      answer: 1,
+    },
+    {
+      question: "What is the currency of Japan?",
+      options: ["Won", "Yuan", "Yen", "Ringgit"],
+      answer: 2,
+    },
+    {
+      question: "Who painted the Mona Lisa?",
+      options: [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Claude Monet",
+      ],
+      answer: 2,
+    },
   ];
 
   const [cur, setCur] = useState(0);
@@ -67,8 +107,9 @@ function App() {
           ) : (
             <div className="">
               <div className="bg-gray-900 text-yellow-400 p-5 mb-2 rounded">
-                <p>{cur + 1}.</p>
-                <p className="">{quesSet[cur].question}</p>
+                <p>
+                  {cur + 1}. <span>{quesSet[cur].question}</span>
+                </p>
               </div>
 
               <div className="bg-gray-800 flex gap-12 p-5 mb-2 rounded">
